@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
             //로그 버튼이 클릭되면 실행될 코드 스코프
 
             //로그 찍어보기
-            Log.d("메인화면", "로그 버튼 클릭됨")
+            Log.d("메인화면", "로그 버튼 클릭됨")  // debug용 로그 (개발자 편의용)
+            Log.e("메인화면","e로 로그 찍어보기")  // error 감지 로그
+            Log.wtf("메인화면","wtf로 로그 찍어보기")  // 일종의 에러 로그 (분노 표출용)
         }
         binding.btnToast.setOnClickListener {
             //토스트 버튼이 클릭되면 => 토스트 띄우기
