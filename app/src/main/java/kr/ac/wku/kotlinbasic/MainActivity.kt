@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             //Int로 변환 => Cacting 필요
 
             val userAge = binding.edtUserAge.text.toString().toInt()
-            
+
             //20살 이상? 성인 문구 토스트로
 //            if (userAge >= 20){
 //                Toast.makeText(this, "성인입니다.", Toast.LENGTH_SHORT).show()
@@ -96,6 +96,21 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "30대입니다.", Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+
+        binding.btnNameToast.setOnClickListener {
+
+            //이름 입력칸에 적힌 이름을 그대로 토스트로 출력(연습)
+
+            val inputName = binding.edtName.text.toString()
+
+            //Toast.makeText(this, inputName, Toast.LENGTH_SHORT).show()
+
+            //이름 입력칸에 적힌 이름+ "님 환영합니다" 토스트로 출력(응용)
+            //유세훈 => "유세훈님 환영합니다." 토스트 출력
+
+            Toast.makeText(this, "${inputName}님 환영합니다.", Toast.LENGTH_SHORT).show()
+
         }
     }
 }
